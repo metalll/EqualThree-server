@@ -39,7 +39,7 @@ public class DBUserReplay {
         }
 
         try {
-            String[] str = { "user", "user", "user"};
+            String[] str = NSDDBConnection.getDBConnection();
             dao = DaoManager.createDao(new JdbcConnectionSource(str[0],str[1],str[2]), UserReplay.class);
 
            } catch (Exception e) {

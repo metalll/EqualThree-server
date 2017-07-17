@@ -38,7 +38,7 @@ public class DBUserScoreRecord {
         }
 
         try {
-            String[] str = { "user", "user", "user"};
+            String[] str = NSDDBConnection.getDBConnection();
             dao = DaoManager.createDao(new JdbcConnectionSource(str[0],str[1],str[2]), UserScoreRecord.class);
 
         } catch (Exception e) {
